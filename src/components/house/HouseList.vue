@@ -30,8 +30,4 @@ export default {
 };
 </script>
 
-<style>
-.bv-example-row{
-  background-color: aliceblue;
-}
-</style>
+<style></style>

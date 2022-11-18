@@ -4,7 +4,7 @@
     <b-row>
       <b-col></b-col>
       <b-col cols="10">
-        <b-jumbotron text-variant="dark" border-variant="dark" style="background-color:rgba(0, 0, 0, 0)">
+        <b-jumbotron bg-variant="muted" text-variant="dark" border-variant="dark">
           <template #header>SSAFY Home</template>
 
           <template #lead>
@@ -38,16 +38,11 @@ export default {
 </script>
 
 <style scoped>
-.underline-steelblue {
-  display: inline-block;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, rgba(72, 190, 233, 0.3) 30%);
-  
-  background-color: rgba(255, 255, 255, 0);
-}
-
 .bv-example-row{
   background-color: rgba(255, 255, 255, 0);
 }
-
-
+.underline-steelblue {
+  display: inline-block;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, rgba(72, 190, 233, 0.3) 30%);
+}
 </style>

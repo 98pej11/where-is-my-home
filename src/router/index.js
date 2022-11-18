@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import AppMain from "@/views/AppMain";
-import AppInstagram from "@/views/AppInstagram";
 import AppHouse from "@/views/AppHouse";
 import KakaoMap from "@/views/KakaoMap.vue";
 
@@ -12,11 +11,6 @@ const routes = [
     path: "/",
     name: "main",
     component: AppMain,
-  },
-  {
-    path: "/instagram",
-    name: "insta",
-    component: AppInstagram,
   },
   {
     path: "/house",
@@ -32,20 +26,10 @@ const routes = [
     ],
   },
   {
-    path: "/todo",
-    name: "todo",
-    component: () => import("@/views/AppTodo"),
-  },
-  {
     path: "/user",
     name: "user",
     component: () => import("@/views/AppUser"),
     children: [
-      {
-        path: "join",
-        name: "join",
-        component: () => import("@/components/user/UserRegister"),
-      },
       {
         path: "login",
         name: "login",
@@ -86,13 +70,6 @@ const routes = [
       },
     ],
   },
-
-  {
-    path: "/filter",
-    name: "mapFilter",
-    component: () => import("@/components/map/mapFilters"),
-  },
-
 ];
 
 const router = new VueRouter({

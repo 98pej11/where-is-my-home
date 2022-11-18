@@ -1,20 +1,14 @@
-<!-- <template>
-  <div id="app">
-    <KakaoMap />
-  </div>
-</template>
-
-<script> -->
 <template>
   <div id="app" style="width:100%">
     <the-header-navbar></the-header-navbar>
-    <router-view style="background-color:rgba(0, 0, 0, 0)"></router-view>
+    <transition name="moveInUp">
+    <router-view/>
+    </transition>
   </div>
 </template>
 
 <script>
 import TheHeaderNavbar from "@/components/TheHeaderNavbar";
-// import KakaoMap from "./views/KakaoMap";
 export default {
   name: "App",
   components: {
@@ -25,37 +19,52 @@ export default {
 
 <style>
 @font-face {
-    font-family: 'myfont';  
-    src: url('./assets/OdFlutterGothicM.ttf') format('truetype');
+    font-family: 'mfont';
+    src: url('C:\Users\98pej\Downloads\gwantong07-15-master\gwantong07-15-master\src\assets\NanumSquareNeo-bRg.ttf');
+    /* src: url('C:\Users\multicampus\Downloads\gwantong07-15-master\src\assets\강원교육모두.ttf'); */
+
     font-weight: normal;
     font-style: normal;
- }
-
+}
+.moveInUp-enter-active{
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+.moveInUp-enter-active{
+  animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.App {
+  text-align: center;
+  font-size: 50px;
+  font-family: mfont;
+}
 #app {
-  font-family: system, Helvetica, Arial, sans-serif;
+  /* width: auto; */
+  font-family: mfont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  /* background: linear-gradient(to right, #000000 0%, #111111 40%,#222222 50%,#111111 60%, #000000 100%); */
-  height: 100vw;  
+  /* background: linear-gradient(to right, #000000 0%, #2c3e50 50%, #000000 100%); */
+  color: white;
+  background-color: #111111;
+  height: 100vw;
 }
-
 a.router-link-exact-active {
   color: #89bfef;
 }
 
 a.router-link-exact-active:hover {
   text-decoration: none;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
 }
 </style>
